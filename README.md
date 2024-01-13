@@ -18,4 +18,4 @@ For the same reason I am not using GIT and a package manager
 
 ## Purpose
 
-To serve static files across all my project, commercial and personal. Only those files that are exactly the same in all projects and do not overwrite the particularity of the projects are served here.
+To serve static files across all my projects, commercial and personal. Only those files that are exactly the same in all projects and do not overwrite the particularity of the projects are served here.
