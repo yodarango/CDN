@@ -1,0 +1,95 @@
+/* all the styles for my DS components */
+.btn.primary,
+button.primary {
+  background-image: linear-gradient(
+    -10deg,
+    var(--dr-quinary),
+    var(--dr-quaternary)
+  );
+}
+
+.btn-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-shuffle.color-font {
+  background-image: url("/public/images/icons/shuffle_light.svg");
+}
+
+.icon-shuffle.color-primary {
+  background-image: url("/public/images/icons/shuffle.svg");
+}
+
+.icon-arrow-up.color-font {
+  background-image: url("/public/images/icons/arrow_up_light.svg");
+}
+
+.icon-arrow-up.color-primary {
+  background-image: url("/public/images/icons/arrow_up.svg");
+}
+
+.icon-arrow-down.color-font {
+  background-image: url("/public/images/icons/arrow_down_light.svg");
+}
+
+.icon-arrow-down.color-primary {
+  background-image: url("/public/images/icons/arrow_down.svg");
+}
+
+.icon-arrow-left.color-font {
+  background-image: url("/public/images/icons/arrow_left_light.svg");
+}
+
+.icon-arrow-left.color-primary {
+  background-image: url("/public/images/icons/arrow_left.svg");
+}
+
+.icon-arrow-right.color-font {
+  background-image: url("/public/images/icons/arrow_right_light.svg");
+}
+
+.icon-arrow-right.color-primary {
+  background-image: url("/public/images/icons/arrow_right.svg");
+}
+
+.icon-save.color-primary {
+  background-image: url("/public/images/icons/save.svg");
+}
+
+.icon-save.color-font {
+  background-image: url("/public/images/icons/save_light.svg");
+}
+
+.icon-folder.color-primary {
+  background-image: url("/public/images/icons/folder.svg");
+}
+
+.icon-folder.color-font {
+  background-image: url("/public/images/icons/folder_light.svg");
+}
+
+.icon-trash.color-primary {
+  background-image: url("/public/images/icons/trash.svg");
+}
+
+.icon-trash.color-font {
+  background-image: url("/public/images/icons/trash_light.svg");
+}
+
+.icon-close-x.color-primary {
+  background-image: url("/public/images/icons/close_x.svg");
+}
+
+.icon-close-x.color-font {
+  background-image: url("/public/images/icons/close_x_light.svg");
+}
+
+.icon-add.color-primary {
+  background-image: url("/public/images/icons/add.svg");
+}
+
+.icon-add.color-font {
+  background-image: url("/public/images/icons/add_light.svg");
+}
