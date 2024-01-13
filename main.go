@@ -15,14 +15,21 @@ func main() {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		origin := r.Header.Get("Origin")
 
+		filePath := r.URL.Query().Get("file")
+
+		if filePath == "" {
+			http.NotFound(w, r)
+			return
+		}
+
 		if isAllowed(origin, allowedDomains) {
-			http.ServeFile(w, r, "./src/" + r.URL.Path) // Replace with your CSS file path
+			http.ServeFile(w, r, "./src/" + filePath) // Replace with your CSS file path
 		} else {
 			http.Error(w, "Forbidden", http.StatusForbidden)
+			return
 		}
 	})
 
-	log.Println("Server starting on :777")
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }
 

@@ -19,3 +19,11 @@ For the same reason I am not using GIT and a package manager
 ## Purpose
 
 To serve static files across all my projects, commercial and personal. Only those files that are exactly the same in all projects and do not overwrite the particularity of the projects are served here.
+
+## Dev
+
+If editing or adding any files under `src/CSS` run `src/utils/main.go` to execute all the compilation. Notice that this only minifies and bundles `.css` files for now. As that is the only thing being served.
+
+## Usage
+
+Simple call the file you would like to be served at the root of the path with the search param `?file=<file>`

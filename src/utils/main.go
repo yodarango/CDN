@@ -2,19 +2,96 @@ package main
 
 import (
 	"bytes"
+	"fmt"
 	"log"
 	"os"
 	"strings"
 
-	"github.com/tdewolff/minify/v2"
-	"github.com/tdewolff/minify/v2/css"
+	"github.com/tdewolff/minify"
+	"github.com/tdewolff/minify/css"
 )
 
+
+func main(){
+disPath := "../CSS/dist"
+bundleAndMinifyAllCSS(disPath)
+bundleAndMinifySingleCSSFile("../CSS/ds.css", disPath)
+bundleAndMinifySingleCSSFile("../CSS/tokens.css", disPath)
+bundleAndMinifySingleCSSFile("../CSS/utils.css", disPath)
+}
+
+func bundleAndMinifySingleCSSFile(file string, distPath string){
+
+	fmt.Println("💨 Starting minification process")
+	originalFilePath := strings.Replace(file, ".css", "", -1)
+	originalFilePath = strings.Replace(originalFilePath, "../CSS/", "", -1)
+	minifiedFilePath  := distPath + "/" + originalFilePath + ".min.css"
+	fmt.Println("❌ removed file ending")
+
+		// Read the content of the original CSS file
+	originalCSSContent, err := os.ReadFile(file)
+	if err != nil {
+		log.Fatalf("Error reading CSS file: %v", err)
+	}
+
+	// Create a minifier instance
+	m := minify.New()
+	m.AddFunc("text/css", css.Minify)
+
+	// Minify the concatenated CSS
+	fmt.Println("🤏 Starting minification process")
+	minifiedCSS := new(bytes.Buffer)
+	if err := m.Minify("text/css", minifiedCSS, bytes.NewReader(originalCSSContent)); err != nil {
+		log.Fatalf("Error minifying resource: %v", err)
+	}
+	fmt.Println("✅ Ended minification process")
+	fmt.Println("📝 Writing buffer to file")
+
+	// Write the minified CSS to a file
+	if err := os.WriteFile(minifiedFilePath, minifiedCSS.Bytes(), 0644); err != nil {
+		log.Fatal(err)
+	}
+
+	fmt.Println("✅ Minification complete. Output saved to ", minifiedFilePath)
+
+	if err := CalculateFileSize(minifiedFilePath); err != nil {
+		log.Fatalf("Error calculating file size: %v", err)
+	}
+
+	CalculateFileSize(minifiedFilePath)
+}
 // Combine and minify all css files
-func main() {
+func bundleAndMinifyAllCSS(distPath string) {
+	fmt.Println("💨 Starting minification process")
 	// List of CSS files to concatenate and minify
-	files := []string{"../CSS/tokens.css", "../CSS/utils.css", "../CSS/ds.css"}
-	 minifiedFilePath  := "../CSS/fullds.min.css"
+	var files []string
+
+	// get all the css files 
+	cssDir, err := os.Open("../CSS")
+
+	if err != nil {
+		log.Fatalf("Error opening CSS directory %v", err)
+	}
+
+	fmt.Println("📂 Reading all contents of CSS dir")
+	cssFiles, err :=  cssDir.Readdirnames(0)
+	if err != nil {
+		log.Fatalf("Error reading CSS directory %v", err)
+	}
+
+	fmt.Println("📖 Reading contents for each file")
+	for _, cssFile := range cssFiles {
+
+		fileName := "../CSS/" + cssFile
+		
+		if strings.Contains(cssFile, ".css") {
+			files = append(files, fileName)
+		}
+		
+	}
+
+	 minifiedFilePath  := distPath + "/fullds.min.css"
+	fmt.Println("🤏 Minified all CSS files")
 
 	// Concatenate CSS files
 	var concatenatedCSS strings.Builder
@@ -27,6 +104,7 @@ func main() {
 		concatenatedCSS.WriteString("\n") // Ensure there's a newline between files
 	}
 
+	fmt.Println("📝 Now writing buffer to file")
 	// Create a minifier instance
 	m := minify.New()
 	m.AddFunc("text/css", css.Minify)
@@ -42,13 +120,13 @@ func main() {
 		log.Fatal(err)
 	}
 
-	log.Println("Minification complete. Output saved to ", minifiedFilePath)
+	fmt.Println("📝 Wrote buffer to one file file")
+	fmt.Println("✅ Minification complete. Output saved to ", minifiedFilePath)
 
 	if err := CalculateFileSize(minifiedFilePath); err != nil {
 		log.Fatal(err)
 	}
 }
-
 
 func CalculateFileSize(filePath string) error {
 	// Open the file
@@ -71,7 +149,7 @@ func CalculateFileSize(filePath string) error {
 	sizeInKB := float64(sizeInBytes) / 1024.0
 
 	// Log the size
-	log.Printf("The size of '%s' is %.2f KB", filePath, sizeInKB)
+	fmt.Printf("🐘 The size of '%s' is %.2f KB \n \n", filePath, sizeInKB)
 
 	return nil
 }
