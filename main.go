@@ -16,6 +16,8 @@ func main() {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		origin := r.Header.Get("Origin")
 
+		fmt.Println("**** domain origin", origin)
+
 		filePath := r.URL.Query().Get("file")
 
 		if filePath == "" {
@@ -62,7 +64,7 @@ func loadAllowedDomains() []string {
 
 func isAllowed(origin string, domains []string) bool {
 	for _, domain := range domains {
-		if strings.Contains(origin, domain) || origin == "" {
+		if strings.Contains(origin, domain) {
 			return true
 		}
 	}
