@@ -2,6 +2,7 @@ package main
 
 import (
 	"bufio"
+	"fmt"
 	"log"
 	"net/http"
 	"os"
@@ -22,19 +23,23 @@ func main() {
 			return
 		}
 
+		filePath = "./src/" + filePath
+
+		fmt.Print(filePath)
+
 		if isAllowed(origin, allowedDomains) {
-			http.ServeFile(w, r, "./src/" + filePath) // Replace with your CSS file path
+			http.ServeFile(w, r, filePath) // Replace with your CSS file path
 		} else {
 			http.Error(w, "Forbidden", http.StatusForbidden)
 			return
 		}
 	})
 
-	log.Fatal(http.ListenAndServe(":8080", nil))
+	log.Fatal(http.ListenAndServe(":777", nil))
 }
 
 func loadAllowedDomains() []string {
-	file, err := os.Open("./domains")
+	file, err := os.Open("./domains.txt")
 	if err != nil {
 		log.Fatal("Error opening domains file: ", err)
 	}
@@ -57,7 +62,7 @@ func loadAllowedDomains() []string {
 
 func isAllowed(origin string, domains []string) bool {
 	for _, domain := range domains {
-		if strings.Contains(origin, domain) {
+		if strings.Contains(origin, domain) || origin == "" {
 			return true
 		}
 	}

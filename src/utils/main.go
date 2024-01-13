@@ -20,6 +20,7 @@ bundleAndMinifySingleCSSFile("../CSS/tokens.css", disPath)
 bundleAndMinifySingleCSSFile("../CSS/utils.css", disPath)
 }
 
+// Combine and minify a specific css file by path
 func bundleAndMinifySingleCSSFile(file string, distPath string){
 
 	fmt.Println("💨 Starting minification process")
@@ -54,11 +55,11 @@ func bundleAndMinifySingleCSSFile(file string, distPath string){
 
 	fmt.Println("✅ Minification complete. Output saved to ", minifiedFilePath)
 
-	if err := CalculateFileSize(minifiedFilePath); err != nil {
+	if err := calculateFileSize(minifiedFilePath); err != nil {
 		log.Fatalf("Error calculating file size: %v", err)
 	}
 
-	CalculateFileSize(minifiedFilePath)
+	calculateFileSize(minifiedFilePath)
 }
 // Combine and minify all css files
 func bundleAndMinifyAllCSS(distPath string) {
@@ -123,12 +124,12 @@ func bundleAndMinifyAllCSS(distPath string) {
 	fmt.Println("📝 Wrote buffer to one file file")
 	fmt.Println("✅ Minification complete. Output saved to ", minifiedFilePath)
 
-	if err := CalculateFileSize(minifiedFilePath); err != nil {
+	if err := calculateFileSize(minifiedFilePath); err != nil {
 		log.Fatal(err)
 	}
 }
-
-func CalculateFileSize(filePath string) error {
+// output the size of the file path
+func calculateFileSize(filePath string) error {
 	// Open the file
 	file, err := os.Open(filePath)
 	if err != nil {

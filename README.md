@@ -22,7 +22,8 @@ To serve static files across all my projects, commercial and personal. Only thos
 
 ## Dev
 
-If editing or adding any files under `src/CSS` run `src/utils/main.go` to execute all the compilation. Notice that this only minifies and bundles `.css` files for now. As that is the only thing being served.
+- If editing or adding any files under `src/CSS` run `src/utils/main.go` to execute all the compilation. Notice that this only minifies and bundles `.css` files for now. As that is the only thing being served.
+- Make sure to run all bundling and minification locally before sending to the VPS. It is much faster.
 
 ## Usage
 
