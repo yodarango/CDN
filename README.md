@@ -24,4 +24,9 @@ To serve static files across all my projects, commercial and personal. Only thos
 
 - Simply run `go run main.go` and all the magic should happen ✨
 - all static files to be served can be scp'd from the `src/dist` dir by running the command `send_dist_to_remote.sh`. This is the file served by nginx
+- To get all the stats of the VPS run `get_vps_project_stats`. This script will fetch the data and call `send_dist_to_remote.sh` to scp it to the remote
 - **THIS IS NOT A SERVER OR APP** It is only a minifying, bundling, and asset-builder for the files to be served
+
+## TO DO
+
+Add some styles to the `src/dist/html/server_stats.html` and make a go function to create a `tokens.css` and `util.css` file from a text file with the variable values
