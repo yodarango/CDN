@@ -1,72 +1,155 @@
 package main
 
 import (
-	"bufio"
+	"bytes"
 	"fmt"
 	"log"
-	"net/http"
 	"os"
 	"strings"
+
+	"github.com/tdewolff/minify"
+	"github.com/tdewolff/minify/css"
 )
 
-func main() {
-	// Load allowed domains from .env file
-	allowedDomains := loadAllowedDomains()
-
-	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		origin := r.Header.Get("Origin")
-
-		fmt.Println("**** domain origin", origin)
-
-		filePath := r.URL.Query().Get("file")
-
-		if filePath == "" {
-			http.NotFound(w, r)
-			return
-		}
-
-		filePath = "./src/" + filePath
-
-		fmt.Print(filePath)
-
-		if isAllowed(origin, allowedDomains) {
-			http.ServeFile(w, r, filePath) // Replace with your CSS file path
-		} else {
-			http.Error(w, "Forbidden", http.StatusForbidden)
-			return
-		}
-	})
-
-	log.Fatal(http.ListenAndServe(":777", nil))
+func main(){
+disPath := "./src/dist/css"
+bundleAndMinifyAllCSS(disPath)
+// bundleAndMinifySingleCSSFile("./src/CSS/ds.css", disPath)
+// bundleAndMinifySingleCSSFile("./src/CSS/tokens.css", disPath)
+// bundleAndMinifySingleCSSFile("./src/CSS/utils.css", disPath)
 }
 
-func loadAllowedDomains() []string {
-	file, err := os.Open("./domains.txt")
+// Combine and minify a specific css file by path
+func bundleAndMinifySingleCSSFile(file string, distPath string){
+
+	fmt.Println("💨 Starting minification process")
+	originalFilePath := strings.Replace(file, ".css", "", -1)
+	originalFilePath = strings.Replace(originalFilePath, "./src/CSS/", "", -1)
+	minifiedFilePath  := distPath + "/" + originalFilePath + ".min.css"
+	fmt.Println("❌ removed file ending")
+
+		// Read the content of the original CSS file
+	originalCSSContent, err := os.ReadFile(file)
 	if err != nil {
-		log.Fatal("Error opening domains file: ", err)
+		log.Fatalf("Error reading CSS file: %v", err)
+	}
+
+	// Create a minifier instance
+	m := minify.New()
+	m.AddFunc("text/css", css.Minify)
+
+	// Minify the concatenated CSS
+	fmt.Println("🤏 Starting minification process")
+	minifiedCSS := new(bytes.Buffer)
+	if err := m.Minify("text/css", minifiedCSS, bytes.NewReader(originalCSSContent)); err != nil {
+		log.Fatalf("Error minifying resource: %v", err)
+	}
+	fmt.Println("✅ Ended minification process")
+	fmt.Println("📝 Writing buffer to file")
+
+	// Write the minified CSS to a file
+	if err := os.WriteFile(minifiedFilePath, minifiedCSS.Bytes(), 0644); err != nil {
+		log.Fatal(err)
+	}
+
+	fmt.Println("✅ Minification complete. Output saved to ", minifiedFilePath)
+
+	if err := calculateFileSize(minifiedFilePath); err != nil {
+		log.Fatalf("Error calculating file size: %v", err)
+	}
+
+	calculateFileSize(minifiedFilePath)
+}
+// Combine and minify all css files
+func bundleAndMinifyAllCSS(distPath string) {
+	fmt.Println("💨 Starting minification process")
+	// List of CSS files to concatenate and minify
+	var files []string
+
+	// get all the css files 
+	cssDir, err := os.Open("./src/CSS")
+
+	if err != nil {
+		log.Fatalf("Error opening CSS directory %v", err)
+	}
+
+	fmt.Println("📂 Reading all contents of CSS dir")
+	cssFiles, err :=  cssDir.Readdirnames(0)
+	if err != nil {
+		log.Fatalf("Error reading CSS directory %v", err)
+	}
+
+	fmt.Println("📖 Reading contents for each file")
+	for _, cssFile := range cssFiles {
+
+		fileName := "./src/CSS/" + cssFile
+		
+		if strings.Contains(cssFile, ".css") {
+			files = append(files, fileName)
+		}
+		
+	}
+
+	 minifiedFilePath  := distPath + "/fullds.min.css"
+	fmt.Println("🤏 Minified all CSS files")
+
+	// Concatenate CSS files
+	var concatenatedCSS strings.Builder
+	for _, file := range files {
+		data, err := os.ReadFile(file)
+		if err != nil {
+			log.Fatal(err)
+		}
+		concatenatedCSS.Write(data)
+		concatenatedCSS.WriteString("\n") // Ensure there's a newline between files
+	}
+
+	fmt.Println("📝 Now writing buffer to file")
+	// Create a minifier instance
+	m := minify.New()
+	m.AddFunc("text/css", css.Minify)
+
+	// Minify the concatenated CSS
+	minifiedCSS := new(bytes.Buffer)
+	if err := m.Minify("text/css", minifiedCSS, strings.NewReader(concatenatedCSS.String())); err != nil {
+		log.Fatal(err)
+	}
+
+	// Write the minified CSS to a file
+	if err := os.WriteFile(minifiedFilePath, minifiedCSS.Bytes(), 0644); err != nil {
+		log.Fatal(err)
+	}
+
+	fmt.Println("📝 Wrote buffer to one file file")
+	fmt.Println("✅ Minification complete. Output saved to ", minifiedFilePath)
+
+	if err := calculateFileSize(minifiedFilePath); err != nil {
+		log.Fatal(err)
+	}
+}
+// output the size of the file path
+func calculateFileSize(filePath string) error {
+	// Open the file
+	file, err := os.Open(filePath)
+	if err != nil {
+		return err
 	}
 	defer file.Close()
 
-	scanner := bufio.NewScanner(file)
-	var domains []string
-
-	for scanner.Scan() {
-		domain := scanner.Text()
-		domains = append(domains, domain)
+	// Get file statistics
+	fileInfo, err := file.Stat()
+	if err != nil {
+		return err
 	}
 
-	if err := scanner.Err(); err != nil {
-		log.Fatal("Error reading domain file: ", err)
-	}
+	// File size in bytes
+	sizeInBytes := fileInfo.Size()
 
-	return domains
-}
+	// Convert size to kilobytes (1 KB = 1024 Bytes)
+	sizeInKB := float64(sizeInBytes) / 1024.0
 
-func isAllowed(origin string, domains []string) bool {
-	for _, domain := range domains {
-		if strings.Contains(origin, domain) {
-			return true
-		}
-	}
-	return false
+	// Log the size
+	fmt.Printf("🐘 The size of '%s' is %.2f KB \n \n", filePath, sizeInKB)
+
+	return nil
 }

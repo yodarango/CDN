@@ -1,2 +1,0 @@
-be.shrood.app
-shrood.app

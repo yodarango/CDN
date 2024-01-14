@@ -22,9 +22,6 @@ To serve static files across all my projects, commercial and personal. Only thos
 
 ## Dev
 
-- If editing or adding any files under `src/CSS` run `src/utils/main.go` to execute all the compilation. Notice that this only minifies and bundles `.css` files for now. As that is the only thing being served.
-- Make sure to run all bundling and minification locally before sending to the VPS. It is much faster.
-
-## Usage
-
-Simple call the file you would like to be served at the root of the path with the search param `?file=<file>`
+- Simply run `go run main.go` and all the magic should happen ✨
+- all static files to be served can be scp'd from the `src/dist` dir by running the command `send_dist_to_remote.sh`. This is the file served by nginx
+- **THIS IS NOT A SERVER OR APP** It is only a minifying, bundling, and asset-builder for the files to be served
