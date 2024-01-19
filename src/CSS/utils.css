@@ -91,15 +91,9 @@ h4,
 .h4 {
   font-size: calc(1.6rem + 0.3vw);
 }
-@media (min-width: 1200px) {
-  h4,
-  .h4 {
-    font-size: 2.4rem;
-  }
-}
 h5,
 .h5 {
-  font-size: 1.4rem;
+  font-size: 1.8rem;
 }
 h6,
 .h6 {
@@ -1530,11 +1524,15 @@ fieldset:disabled .btn {
 .btn-link {
   background-color: transparent;
   text-decoration: underline;
-  color: var(--font-color);
-  color: var(--dr-btn-hover-color);
   border: none;
   outline: none;
   cursor: pointer;
+}
+
+.btn-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn-lg,
@@ -1863,7 +1861,6 @@ fieldset:disabled .btn {
   --dr-border-opacity: 1;
   border-color: var(--dr-white);
 }
-/*! IMPLEMENT BORDER COLORING */
 .border-light-subtle {
   border-color: var(--dr-light-border-subtle);
 }

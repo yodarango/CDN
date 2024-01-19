@@ -14,9 +14,10 @@ import (
 func main(){
 disPath := "./src/dist/css"
 bundleAndMinifyAllCSS(disPath)
-// bundleAndMinifySingleCSSFile("./src/CSS/ds.css", disPath)
-// bundleAndMinifySingleCSSFile("./src/CSS/tokens.css", disPath)
-// bundleAndMinifySingleCSSFile("./src/CSS/utils.css", disPath)
+bundleAndMinifySingleCSSFile("./src/CSS/ds.css", disPath)
+bundleAndMinifySingleCSSFile("./src/CSS/icons.css", disPath)
+bundleAndMinifySingleCSSFile("./src/CSS/tokens.css", disPath)
+bundleAndMinifySingleCSSFile("./src/CSS/utils.css", disPath)
 }
 
 // Combine and minify a specific css file by path
