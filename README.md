@@ -30,5 +30,4 @@ To serve static files across all my projects, commercial and personal. Only thos
 ## TO DO
 
 - Add some styles to the `src/dist/html/server_stats.html`
-- Make a go function to create a `tokens.css` and `util.css` file from a text file with the variable values
 - make a visual page of all the colors, icons and assets used
