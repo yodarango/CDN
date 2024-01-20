@@ -23,7 +23,7 @@
 }
 
 .icon-arrow-left.color-alpha {
-  background-image: url("../icons/chevron_left_light.svg");
+  background-image: url("../icons/arrow_left_light.svg");
 }
 
 .icon-arrow-left.color-beta {
@@ -31,10 +31,26 @@
 }
 
 .icon-arrow-right.color-alpha {
-  background-image: url("../icons/chevron_right_light.svg");
+  background-image: url("../icons/arrow_right_light.svg");
 }
 
 .icon-arrow-right.color-beta {
+  background-image: url("../icons/arrow_right.svg");
+}
+
+.icon-chevron-left.color-alpha {
+  background-image: url("../icons/chevron_left_light.svg");
+}
+
+.icon-chevron-left.color-beta {
+  background-image: url("../icons/chevron_left.svg");
+}
+
+.icon-chevron-right.color-alpha {
+  background-image: url("../icons/chevron_right_light.svg");
+}
+
+.icon-chevron-right.color-beta {
   background-image: url("../icons/chevron_right.svg");
 }
 
