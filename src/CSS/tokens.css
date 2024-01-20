@@ -166,8 +166,8 @@
   --dr-alpha-rgb: 241, 234, 255;
   --dr-beta: #130e21; /* app background */
   --dr-beta-rgb: 19, 14, 33;
-  --dr-gamma: #201a30; /* app foreground contrast */
-  --dr-gamma-rgb: 32, 26, 48;
+  --dr-gamma: #2e1b5e; /* app foreground contrast */
+  --dr-gamma-rgb: 46, 27, 94;
   --dr-delta: #5200ff;
   --dr-delta-rgb: 82, 0, 255;
   --dr-epsilon: #763ffb;
@@ -178,12 +178,12 @@
   --dr-eta-rgb: 255, 77, 98;
   --dr-theta: #ffc107;
   --dr-theta-rgb: 255, 193, 7;
-  --dr-iota: #8d82a8;
-  --dr-iota-rgb: 141, 130, 168;
+  --dr-iota: #ff00cb;
+  --dr-iota-rgb: 255, 0, 203;
   --dr-kappa: #6af548;
   --dr-kappa-rgb: 106, 245, 72;
-  --dr-lambda: #07a0ff;
-  --dr-lambda-rgb: 7, 160, 255;
+  --dr-lambda: #00cfff;
+  --dr-lambda-rgb: 0, 207, 255;
   --dr-mu: #350c8cab;
   --dr-mu-rgb: 53, 12, 140, 0.67;
   --dr-nu: transparent;
