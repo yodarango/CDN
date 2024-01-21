@@ -222,7 +222,18 @@
   background-image: url("../icons/ellipsis_horizontal.svg");
 }
 
-/*  buttons  */
-.btn.primary {
-  background-image: linear-gradient(-10deg, var(--dr-epsilon), var(--dr-zeta));
+.icon-heart.color-alpha {
+  background-image: url("../icons/hear_light.svg");
+}
+
+.icon-heart.color-beta {
+  background-image: url("../icons/heart.svg");
+}
+
+.icon-chat.color-alpha {
+  background-image: url("../icons/chat_light.svg");
+}
+
+.icon-chat.color-beta {
+  background-image: url("../icons/chat.svg");
 }
