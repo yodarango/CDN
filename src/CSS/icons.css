@@ -237,3 +237,11 @@
 .icon-chat.color-beta {
   background-image: url("../icons/chat.svg");
 }
+
+.icon-loading.color-alpha {
+  background-image: url("../icons/loading_light.svg");
+}
+
+.icon-loading.color-beta {
+  background-image: url("../icons/loading.svg");
+}
