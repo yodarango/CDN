@@ -119,8 +119,8 @@
   --dr-font-weight-8: 800;
   --dr-font-weight-9: 900;
 
-  --dr-font-size-6: 1rem;
-  --dr-font-size-5: 1.2rem;
+  --dr-font-size-6: 1.2rem;
+  --dr-font-size-5: 1.4rem;
   --dr-font-size-4: 1.6rem;
   --dr-font-size-3: 1.8rem;
   --dr-font-size-2: 2rem;
@@ -156,7 +156,7 @@
   --dr-btn-font-weight: var(--dr-font-weight-4);
 
   /*  shadows */
-  --dr-box-shadow: 0.25rem 0.25rem 0.75rem var(--dr-color-tertiary);
+  --dr-box-shadow: 0.25rem 0.25rem 0.75rem var(--dr-delta);
 }
 
 :root,
@@ -166,8 +166,8 @@
   --dr-alpha-rgb: 241, 234, 255;
   --dr-beta: #130e21; /* app background */
   --dr-beta-rgb: 19, 14, 33;
-  --dr-gamma: #2e1b5e; /* app foreground contrast */
-  --dr-gamma-rgb: 46, 27, 94;
+  --dr-gamma: #231645; /* app foreground contrast */
+  --dr-gamma-rgb: 35, 22, 69;
   --dr-delta: #5200ff;
   --dr-delta-rgb: 82, 0, 255;
   --dr-epsilon: #763ffb;

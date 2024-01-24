@@ -9,6 +9,20 @@ REMOTE_USER="root"  # Replace with your actual username on the remote server
 REMOTE_IP="66.42.86.91"
 REMOTE_PATH="/var/www/repos/cdn/"
 
+if [ "$#" -ne 1 ]; then
+    echo "Please provide a commit message"
+    exit 1
+fi
+
+# The commit message is the first argument to the script
+COMMIT_MESSAGE="$1"
+
+echo "📝 Committing and pushing changes..."
+
+git add .
+git commit -m "$COMMIT_MESSAGE"
+git push 
+
 echo "👷 Building...."
 # Build the project
 ./cdn
