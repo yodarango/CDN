@@ -4,7 +4,8 @@
 # ssh-copy-id -i ~/.ssh/id_rsa.pub root@66.42.86.91
 
 # Define local and remote paths
-LOCAL_PATH="/private/var/www/websites/temp/CDN/app/src/dist/"
+MIN_CSS="/private/var/www/websites/temp/CDN/app/src/dist/"
+ICONS="/private/var/www/websites/temp/CDN/app/src/icons/"
 REMOTE_USER="root"  # Replace with your actual username on the remote server
 REMOTE_IP="66.42.86.91"
 REMOTE_PATH="/var/www/repos/cdn/"
@@ -29,6 +30,7 @@ echo "👷 Building...."
 
 echo "🖨️ Staring copying to $REMOTE_IP"
 # SCP command to copy the folder
-scp -r "$LOCAL_PATH" "$REMOTE_USER@$REMOTE_IP:$REMOTE_PATH"
+scp -r "$MIN_CSS" "$REMOTE_USER@$REMOTE_IP:$REMOTE_PATH"
+scp -r "$ICONS" "$REMOTE_USER@$REMOTE_IP:$REMOTE_PATH"
 
 echo "✅ Deploy executed successfully."
