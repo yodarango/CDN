@@ -31,4 +31,4 @@ echo "🖨️ Staring copying to $REMOTE_IP"
 # SCP command to copy the folder
 scp -r "$LOCAL_PATH" "$REMOTE_USER@$REMOTE_IP:$REMOTE_PATH"
 
-echo "✅ Folder copied successfully."
+echo "✅ Deploy executed successfully."
