@@ -31,6 +31,6 @@ echo "👷 Building...."
 echo "🖨️ Staring copying to $REMOTE_IP"
 # SCP command to copy the folder
 scp -r "$MIN_CSS" "$REMOTE_USER@$REMOTE_IP:$REMOTE_PATH"
-scp -r "$ICONS" "$REMOTE_USER@$REMOTE_IP:$REMOTE_PATH"
+rsync -avz "$ICONS" "$REMOTE_USER@$REMOTE_IP:${REMOTE_PATH}icons/"
 
 echo "✅ Deploy executed successfully."
