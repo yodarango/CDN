@@ -263,3 +263,9 @@
 .icon-person.color-beta {
   background-image: url("../icons/person.svg");
 }
+.icon-notifications.color-alpha {
+  background-image: url("../icons/notifications_light.svg");
+}
+.icon-notifications.color-beta {
+  background-image: url("../icons/notifications.svg");
+}
