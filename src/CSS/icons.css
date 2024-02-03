@@ -80,11 +80,9 @@
 .icon-trash.color-danger {
   background-image: url("../icons/trash_danger.svg");
 }
-
 .icon-add.color-beta {
   background-image: url("../icons/add.svg");
 }
-
 .icon-add.color-alpha {
   background-image: url("../icons/add_light.svg");
 }
