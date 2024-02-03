@@ -245,3 +245,21 @@
 .icon-loading.color-beta {
   background-image: url("../icons/loading.svg");
 }
+.icon-home.color-alpha {
+  background-image: url("../icons/home_light.svg");
+}
+.icon-home.color-beta {
+  background-image: url("../icons/home.svg");
+}
+.icon-book.color-alpha {
+  background-image: url("../icons/book_light.svg");
+}
+.icon-book.color-beta {
+  background-image: url("../icons/book.svg");
+}
+.icon-person.color-alpha {
+  background-image: url("../icons/person_light.svg");
+}
+.icon-person.color-beta {
+  background-image: url("../icons/person.svg");
+}
