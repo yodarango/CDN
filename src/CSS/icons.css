@@ -276,7 +276,10 @@
 .icon-brush.color-beta {
   background-image: url("../icons/brush.svg");
 }
-.icon-business {
+.icon-business.color-alpha {
+  background-image: url("../icons/business_light.svg");
+}
+.icon-business.color-beta {
   background-image: url("../icons/business.svg");
 }
 .icon-church.color-alpha {
@@ -285,8 +288,14 @@
 .icon-church.color-beta {
   background-image: url("../icons/church.svg");
 }
-.icon-hammer {
+.icon-hammer.color-alpha {
+  background-image: url("../icons/hammer_light.svg");
+}
+.icon-hammer.color-beta {
   background-image: url("../icons/hammer.svg");
+}
+.icon-bookmark.color-alpha {
+  background-image: url("../icons/bookmark_light.svg");
 }
 .icon-bookmark {
   background-image: url("../icons/bookmark.svg");
