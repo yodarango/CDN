@@ -270,3 +270,24 @@
 .icon-notifications.color-beta {
   background-image: url("../icons/notifications.svg");
 }
+.icon-brush.color-alpha {
+  background-image: url("../icons/brush_light.svg");
+}
+.icon-brush.color-beta {
+  background-image: url("../icons/brush.svg");
+}
+.icon-business {
+  background-image: url("../icons/business.svg");
+}
+.icon-church.color-alpha {
+  background-image: url("../icons/church_light.svg");
+}
+.icon-church.color-beta {
+  background-image: url("../icons/church.svg");
+}
+.icon-hammer {
+  background-image: url("../icons/hammer.svg");
+}
+.icon-bookmark {
+  background-image: url("../icons/bookmark.svg");
+}
