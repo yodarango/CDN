@@ -297,6 +297,6 @@
 .icon-bookmark.color-alpha {
   background-image: url("../icons/bookmark_light.svg");
 }
-.icon-bookmark {
+.icon-bookmark.color-beta {
   background-image: url("../icons/bookmark.svg");
 }
