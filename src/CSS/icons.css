@@ -300,3 +300,15 @@
 .icon-bookmark.color-beta {
   background-image: url("../icons/bookmark.svg");
 }
+.icon-lock-closed.color-alpha {
+  background-image: url("../icons/lock_closed_light.svg");
+}
+.icon-lock-closed.color-beta {
+  background-image: url("../icons/lock_closed.svg");
+}
+.icon-lock-open.color-alpha {
+  background-image: url("../icons/lock_open_light.svg");
+}
+.icon-lock-open.color-beta {
+  background-image: url("../icons/lock_open.svg");
+}
