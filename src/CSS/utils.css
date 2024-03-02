@@ -519,6 +519,19 @@ fieldset:disabled .btn,
   justify-content: center;
 }
 
+.btn-base,
+.btn-base:hover,
+.btn-base:visited,
+.btn-base:active {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+}
+
 .btn-lg,
 .btn-group-lg > .btn {
   --dr-btn-font-size: 1.25rem;
