@@ -138,6 +138,8 @@
   --dr-spacing-7: 3.2rem;
   --dr-spacing-8: 4.8rem;
   --icon-size: 3rem;
+  --icons-size-sm: 2rem;
+  --icons-size-lg: 3.5rem;
 
   /* radiuses */
   --dr-border-radius-1: 0.5em;
