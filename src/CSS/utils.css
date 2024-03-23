@@ -388,13 +388,25 @@ progress {
   text-transform: uppercase;
 }
 
-.icon {
+.icon,
+.icon-sm,
+.icon-lg {
   width: var(--icon-size);
   height: var(--icon-size);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   display: block;
+}
+
+.icon-sm {
+  width: var(--icon-size-sm);
+  height: var(--icon-size-sm);
+}
+
+.icon-lg {
+  width: var(--icon-size-lg);
+  height: var(--icon-size-lg);
 }
 
 /* TABLES */
