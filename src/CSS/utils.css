@@ -755,6 +755,9 @@ fieldset:disabled .btn,
 .border-start-0 {
   border-left: none;
 }
+.border-alpha {
+  border-color: var(--dr-alpha);
+}
 .border-beta {
   border-color: var(--dr-beta);
 }
