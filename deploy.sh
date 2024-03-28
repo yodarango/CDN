@@ -4,8 +4,8 @@
 # ssh-copy-id -i ~/.ssh/id_rsa.pub root@66.42.86.91
 
 # Define local and remote paths
-MIN_CSS="/private/var/www/websites/temp/CDN/app/src/dist/"
-ICONS="/private/var/www/websites/temp/CDN/app/src/icons/"
+MIN_CSS="/Users/yodarango/Desktop/repos/cdn/app/src/dist/"
+ICONS="/Users/yodarango/Desktop/repos/cdn/app/src/icons/"
 REMOTE_USER="root"  # Replace with your actual username on the remote server
 REMOTE_IP="66.42.86.91"
 REMOTE_PATH="/var/www/repos/cdn/"
