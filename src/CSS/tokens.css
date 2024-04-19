@@ -192,6 +192,8 @@
   --dr-mu-rgb: 53, 12, 140, 0.67;
   --dr-nu: transparent;
   --dr-nu-rgb: 0, 0, 0, 0;
+  --dr-omicron: #443564;
+  --dr-omicron-rgb: 68, 53, 100;
 
   /* stateful colors */
   --dr-success: var(--dr-kappa);
