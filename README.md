@@ -34,7 +34,7 @@ To build on top of this system, simply overwrite the dictionary tokens.
 
 - Simply run `go run main.go` and all the magic should happen ✨
 - all static files to be served can be scp'd from the `src/dist` dir by running the command `send_dist_to_remote.sh`. This is the file served by nginx
-- To get all the stats of the VPS run `get_vps_project_stats.sh`. This script will fetch the data and call `send_dist_to_remote.sh` to scp it to the remote
+- To get all the stats of the VPS run `get_vps_project_stats.sh`. This script will fetch the data and write to the html file in the `/dist` directory
 - **THIS IS NOT A SERVER OR APP** It is only a minifying, bundling, and asset-builder for the files to be served
 
 ## TO DO
