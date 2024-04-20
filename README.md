@@ -37,6 +37,10 @@ To build on top of this system, simply overwrite the dictionary tokens.
 - To get all the stats of the VPS run `get_vps_project_stats.sh`. This script will fetch the data and write to the html file in the `/dist` directory
 - **THIS IS NOT A SERVER OR APP** It is only a minifying, bundling, and asset-builder for the files to be served
 
+### About main.go
+
+This files to be minimized are hardcoded in main.go. If adding or deleting files/ dirs, make sure to edit this file.
+
 ## TO DO
 
 - Add some styles to the `src/dist/html/server_stats.html`
