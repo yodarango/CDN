@@ -39,7 +39,7 @@ To build on top of this system, simply overwrite the dictionary tokens.
 
 ### About main.go
 
-This files to be minimized are hardcoded in main.go. If adding or deleting files/ dirs, make sure to edit this file.
+This files to be minimized are hardcoded in main.go. If adding or deleting files/ dirs, make sure to edit this file and rebuild the binary with `go build`
 
 ## TO DO
 
