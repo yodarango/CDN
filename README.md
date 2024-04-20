@@ -18,7 +18,17 @@ For the same reason I am not using GIT and a package manager
 
 ## Purpose
 
-To serve static files across all my projects, commercial and personal. Only those files that are exactly the same in all projects and do not overwrite the particularity of the projects are served here.
+To serve static files across all my projects, commercial and personal. Only those files that are exactly the same in all projects and do not overwrite the particularity of the projects are served here. The main purpose, however, at the time of writing is to share basic css, js, and html styles across my apps.
+
+### About CSS
+
+This project includes skeleton styles that aid but do not generally intrude other projects. The styles provided by these sheets are basic styles that can be built upon and overwritten for greater customization. There are three types of style sheets provided at this time. Those are:
+
+- icons: A small library of commonly used icons
+- tokens: Default dictionary tokens for colors, sizes, fonts, etc.
+- utils: A set of basic utility classes that reflect bootstrap naming patterns
+
+To build on top of this system, simply overwrite the dictionary tokens.
 
 ## Dev
 
@@ -30,4 +40,5 @@ To serve static files across all my projects, commercial and personal. Only thos
 ## TO DO
 
 - Add some styles to the `src/dist/html/server_stats.html`
-- make a visual page of all the colors, icons and assets used
+- Make a visual page of all the colors, icons and assets used
+- Find a better system for coloring svg icons
