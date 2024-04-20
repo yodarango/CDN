@@ -312,3 +312,9 @@
 .icon-lock-open.color-beta {
   background-image: url("../icons/lock_open.svg");
 }
+.icon-enter.color-alpha {
+  background-image: url("../icons/enter_light.svg");
+}
+.icon-enter.color-beta {
+  background-image: url("../icons/enter.svg");
+}
