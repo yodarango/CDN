@@ -318,9 +318,9 @@
 .icon-enter.color-beta {
   background-image: url("../icons/enter.svg");
 }
-.icon-delete.color-alpha {
+.icon-delete-key.color-alpha {
   background-image: url("../icons/delete_key_light.svg");
 }
-.delete-key.color-beta {
+.icon-delete-key.color-beta {
   background-image: url("../icons/delete_key.svg");
 }
