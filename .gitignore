@@ -1,2 +1,4 @@
 deploy.sh
 get_vps_project_stats.sh
+html/
+.DS_Store

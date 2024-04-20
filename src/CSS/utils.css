@@ -806,6 +806,40 @@ fieldset:disabled .btn,
 .border-nu {
   border-color: var(--dr-nu);
 }
+.border-xi {
+  border-color: var(--dr-xi);
+}
+.border-omicron {
+  border-color: var(--dr-omicron);
+}
+.border-pi {
+  border-color: var(--dr-pi);
+}
+.border-rho {
+  border-color: var(--dr-rho);
+}
+.border-sigma {
+  border-color: var(--dr-sigma);
+}
+.border-tau {
+  border-color: var(--dr-tau);
+}
+.border-upsilon {
+  border-color: var(--dr-upsilon);
+}
+.border-phi {
+  border-color: var(--dr-phi);
+}
+.border-chi {
+  border-color: var(--dr-chi);
+}
+.border-psi {
+  border-color: var(--dr-psi);
+}
+.border-omega {
+  border-color: var(--dr-omega);
+}
+
 .border-success {
   border-color: var(--dr-success);
 }
@@ -2078,6 +2112,204 @@ fieldset:disabled .btn,
 .color-nu * {
   stroke: var(--dr-nu);
 }
+.color-xi {
+  color: var(--dr-xi);
+}
+.color-xi-20 {
+  color: rgba(var(--dr-xi-rgb), 0.2);
+}
+.color-xi-40 {
+  color: rgba(var(--dr-xi-rgb), 0.4);
+}
+.color-xi-60 {
+  color: rgba(var(--dr-xi-rgb), 0.6);
+}
+.color-xi-80 {
+  color: rgba(var(--dr-xi-rgb), 0.8);
+}
+.color-xi * {
+  stroke: var(--dr-xi);
+}
+.color-omicron {
+  color: var(--dr-omicron);
+}
+.color-omicron-20 {
+  color: rgba(var(--dr-omicron-rgb), 0.2);
+}
+.color-omicron-40 {
+  color: rgba(var(--dr-omicron-rgb), 0.4);
+}
+.color-omicron-60 {
+  color: rgba(var(--dr-omicron-rgb), 0.6);
+}
+.color-omicron-80 {
+  color: rgba(var(--dr-omicron-rgb), 0.8);
+}
+.color-omicron * {
+  stroke: var(--dr-omicron);
+}
+.color-pi {
+  color: var(--dr-pi);
+}
+.color-pi-20 {
+  color: rgba(var(--dr-pi-rgb), 0.2);
+}
+.color-pi-40 {
+  color: rgba(var(--dr-pi-rgb), 0.4);
+}
+.color-pi-60 {
+  color: rgba(var(--dr-pi-rgb), 0.6);
+}
+.color-pi-80 {
+  color: rgba(var(--dr-pi-rgb), 0.8);
+}
+.color-pi * {
+  stroke: var(--dr-pi);
+}
+.color-rho {
+  color: var(--dr-rho);
+}
+.color-rho-20 {
+  color: rgba(var(--dr-rho-rgb), 0.2);
+}
+.color-rho-40 {
+  color: rgba(var(--dr-rho-rgb), 0.4);
+}
+.color-rho-60 {
+  color: rgba(var(--dr-rho-rgb), 0.6);
+}
+.color-rho-80 {
+  color: rgba(var(--dr-rho-rgb), 0.8);
+}
+.color-rho * {
+  stroke: var(--dr-rho);
+}
+.color-sigma {
+  color: var(--dr-sigma);
+}
+.color-sigma-20 {
+  color: rgba(var(--dr-sigma-rgb), 0.2);
+}
+.color-sigma-40 {
+  color: rgba(var(--dr-sigma-rgb), 0.4);
+}
+.color-sigma-60 {
+  color: rgba(var(--dr-sigma-rgb), 0.6);
+}
+.color-sigma-80 {
+  color: rgba(var(--dr-sigma-rgb), 0.8);
+}
+.color-sigma * {
+  stroke: var(--dr-sigma);
+}
+.color-tau {
+  color: var(--dr-tau);
+}
+.color-tau-20 {
+  color: rgba(var(--dr-tau-rgb), 0.2);
+}
+.color-tau-40 {
+  color: rgba(var(--dr-tau-rgb), 0.4);
+}
+.color-tau-60 {
+  color: rgba(var(--dr-tau-rgb), 0.6);
+}
+.color-tau-80 {
+  color: rgba(var(--dr-tau-rgb), 0.8);
+}
+.color-tau * {
+  stroke: var(--dr-tau);
+}
+.color-upsilon {
+  color: var(--dr-upsilon);
+}
+.color-upsilon-20 {
+  color: rgba(var(--dr-upsilon-rgb), 0.2);
+}
+.color-upsilon-40 {
+  color: rgba(var(--dr-upsilon-rgb), 0.4);
+}
+.color-upsilon-60 {
+  color: rgba(var(--dr-upsilon-rgb), 0.6);
+}
+.color-upsilon-80 {
+  color: rgba(var(--dr-upsilon-rgb), 0.8);
+}
+.color-upsilon * {
+  stroke: var(--dr-upsilon);
+}
+.color-phi {
+  color: var(--dr-phi);
+}
+.color-phi-20 {
+  color: rgba(var(--dr-phi-rgb), 0.2);
+}
+.color-phi-40 {
+  color: rgba(var(--dr-phi-rgb), 0.4);
+}
+.color-phi-60 {
+  color: rgba(var(--dr-phi-rgb), 0.6);
+}
+.color-phi-80 {
+  color: rgba(var(--dr-phi-rgb), 0.8);
+}
+.color-phi * {
+  stroke: var(--dr-phi);
+}
+.color-chi {
+  color: var(--dr-chi);
+}
+.color-chi-20 {
+  color: rgba(var(--dr-chi-rgb), 0.2);
+}
+.color-chi-40 {
+  color: rgba(var(--dr-chi-rgb), 0.4);
+}
+.color-chi-60 {
+  color: rgba(var(--dr-chi-rgb), 0.6);
+}
+.color-chi-80 {
+  color: rgba(var(--dr-chi-rgb), 0.8);
+}
+.color-chi * {
+  stroke: var(--dr-chi);
+}
+.color-psi {
+  color: var(--dr-psi);
+}
+.color-psi-20 {
+  color: rgba(var(--dr-psi-rgb), 0.2);
+}
+.color-psi-40 {
+  color: rgba(var(--dr-psi-rgb), 0.4);
+}
+.color-psi-60 {
+  color: rgba(var(--dr-psi-rgb), 0.6);
+}
+.color-psi-80 {
+  color: rgba(var(--dr-psi-rgb), 0.8);
+}
+.color-psi * {
+  stroke: var(--dr-psi);
+}
+.color-omega {
+  color: var(--dr-omega);
+}
+.color-omega-20 {
+  color: rgba(var(--dr-omega-rgb), 0.2);
+}
+.color-omega-40 {
+  color: rgba(var(--dr-omega-rgb), 0.4);
+}
+.color-omega-60 {
+  color: rgba(var(--dr-omega-rgb), 0.6);
+}
+.color-omega-80 {
+  color: rgba(var(--dr-omega-rgb), 0.8);
+}
+.color-omega * {
+  stroke: var(--dr-omega);
+}
 .color-success {
   color: var(--dr-success);
 }
@@ -2336,6 +2568,171 @@ fieldset:disabled .btn,
 .bg-nu-80 {
   background-color: rgba(var(--dr-nu-rgb), 0.8);
 }
+.bg-xi {
+  background-color: var(--dr-xi);
+}
+.bg-xi-20 {
+  background-color: rgba(var(--dr-xi-rgb), 0.2);
+}
+.bg-xi-40 {
+  background-color: rgba(var(--dr-xi-rgb), 0.4);
+}
+.bg-xi-60 {
+  background-color: rgba(var(--dr-xi-rgb), 0.6);
+}
+.bg-xi-80 {
+  background-color: rgba(var(--dr-xi-rgb), 0.8);
+}
+.bg-omicron {
+  background-color: var(--dr-omicron);
+}
+.bg-omicron-20 {
+  background-color: rgba(var(--dr-omicron-rgb), 0.2);
+}
+.bg-omicron-40 {
+  background-color: rgba(var(--dr-omicron-rgb), 0.4);
+}
+.bg-omicron-60 {
+  background-color: rgba(var(--dr-omicron-rgb), 0.6);
+}
+.bg-omicron-80 {
+  background-color: rgba(var(--dr-omicron-rgb), 0.8);
+}
+.bg-pi {
+  background-color: var(--dr-pi);
+}
+.bg-pi-20 {
+  background-color: rgba(var(--dr-pi-rgb), 0.2);
+}
+.bg-pi-40 {
+  background-color: rgba(var(--dr-pi-rgb), 0.4);
+}
+.bg-pi-60 {
+  background-color: rgba(var(--dr-pi-rgb), 0.6);
+}
+.bg-pi-80 {
+  background-color: rgba(var(--dr-pi-rgb), 0.8);
+}
+.bg-rho {
+  background-color: var(--dr-rho);
+}
+.bg-rho-20 {
+  background-color: rgba(var(--dr-rho-rgb), 0.2);
+}
+.bg-rho-40 {
+  background-color: rgba(var(--dr-rho-rgb), 0.4);
+}
+.bg-rho-60 {
+  background-color: rgba(var(--dr-rho-rgb), 0.6);
+}
+.bg-rho-80 {
+  background-color: rgba(var(--dr-rho-rgb), 0.8);
+}
+.bg-sigma {
+  background-color: var(--dr-sigma);
+}
+.bg-sigma-20 {
+  background-color: rgba(var(--dr-sigma-rgb), 0.2);
+}
+.bg-sigma-40 {
+  background-color: rgba(var(--dr-sigma-rgb), 0.4);
+}
+.bg-sigma-60 {
+  background-color: rgba(var(--dr-sigma-rgb), 0.6);
+}
+.bg-sigma-80 {
+  background-color: rgba(var(--dr-sigma-rgb), 0.8);
+}
+.bg-tau {
+  background-color: var(--dr-tau);
+}
+.bg-tau-20 {
+  background-color: rgba(var(--dr-tau-rgb), 0.2);
+}
+.bg-tau-40 {
+  background-color: rgba(var(--dr-tau-rgb), 0.4);
+}
+.bg-tau-60 {
+  background-color: rgba(var(--dr-tau-rgb), 0.6);
+}
+.bg-tau-80 {
+  background-color: rgba(var(--dr-tau-rgb), 0.8);
+}
+.bg-upsilon {
+  background-color: var(--dr-upsilon);
+}
+.bg-upsilon-20 {
+  background-color: rgba(var(--dr-upsilon-rgb), 0.2);
+}
+.bg-upsilon-40 {
+  background-color: rgba(var(--dr-upsilon-rgb), 0.4);
+}
+.bg-upsilon-60 {
+  background-color: rgba(var(--dr-upsilon-rgb), 0.6);
+}
+.bg-upsilon-80 {
+  background-color: rgba(var(--dr-upsilon-rgb), 0.8);
+}
+.bg-phi {
+  background-color: var(--dr-phi);
+}
+.bg-phi-20 {
+  background-color: rgba(var(--dr-phi-rgb), 0.2);
+}
+.bg-phi-40 {
+  background-color: rgba(var(--dr-phi-rgb), 0.4);
+}
+.bg-phi-60 {
+  background-color: rgba(var(--dr-phi-rgb), 0.6);
+}
+.bg-phi-80 {
+  background-color: rgba(var(--dr-phi-rgb), 0.8);
+}
+.bg-chi {
+  background-color: var(--dr-chi);
+}
+.bg-chi-20 {
+  background-color: rgba(var(--dr-chi-rgb), 0.2);
+}
+.bg-chi-40 {
+  background-color: rgba(var(--dr-chi-rgb), 0.4);
+}
+.bg-chi-60 {
+  background-color: rgba(var(--dr-chi-rgb), 0.6);
+}
+.bg-chi-80 {
+  background-color: rgba(var(--dr-chi-rgb), 0.8);
+}
+.bg-psi {
+  background-color: var(--dr-psi);
+}
+.bg-psi-20 {
+  background-color: rgba(var(--dr-psi-rgb), 0.2);
+}
+.bg-psi-40 {
+  background-color: rgba(var(--dr-psi-rgb), 0.4);
+}
+.bg-psi-60 {
+  background-color: rgba(var(--dr-psi-rgb), 0.6);
+}
+.bg-psi-80 {
+  background-color: rgba(var(--dr-psi-rgb), 0.8);
+}
+.bg-omega {
+  background-color: var(--dr-omega);
+}
+.bg-omega-20 {
+  background-color: rgba(var(--dr-omega-rgb), 0.2);
+}
+.bg-omega-40 {
+  background-color: rgba(var(--dr-omega-rgb), 0.4);
+}
+.bg-omega-60 {
+  background-color: rgba(var(--dr-omega-rgb), 0.6);
+}
+.bg-omega-80 {
+  background-color: rgba(var(--dr-omega-rgb), 0.8);
+}
 .bg-success {
   background-color: var(--dr-success);
 }
@@ -2351,7 +2748,6 @@ fieldset:disabled .btn,
 .bg-success-80 {
   background-color: rgba(var(--dr-success-rgb), 0.8);
 }
-
 .bg-danger {
   background-color: var(--dr-danger);
 }
