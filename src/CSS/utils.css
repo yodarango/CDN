@@ -399,6 +399,14 @@ progress {
   display: block;
 }
 
+.icon svg,
+.icon-sm svg,
+.icon-lg svg {
+  color: currentColor;
+  width: 100%;
+  height: 100%;
+}
+
 .icon-sm {
   width: var(--icon-size-sm);
   height: var(--icon-size-sm);
