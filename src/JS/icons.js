@@ -427,20 +427,21 @@ let interval;
 
 function replaceIcons() {
   const icons = document.querySelectorAll(".icon");
+  if (count >= icons.length) {
+    icons.forEach((icon) => {
+      const iconClass = icon
+        .getAttribute("class")
+        .find((c) => c.startsWith("icon-"));
+      icon.innerHTML = icons[iconClass];
+    });
+
+    console.log("Icons replaced", iconClass, count);
+    count++;
+    clearInterval(interval);
+  }
 
   interval = setInterval(() => {
-    if (count >= icons.length) {
-      icons.forEach((icon) => {
-        const iconClass = icon
-          .getAttribute("class")
-          .find((c) => c.startsWith("icon-"));
-        icon.innerHTML = icons[iconClass];
-      });
-
-      console.log("Icons replaced", iconClass, count);
-      count++;
-      clearInterval(interval);
-    }
+    replaceIcons();
   }, 100);
 }
 
