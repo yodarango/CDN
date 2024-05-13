@@ -434,7 +434,7 @@ function replaceIcons() {
         ?.split(" ")
         ?.find((c) => c.startsWith("icon-"));
 
-      const svgIcon = icons[iconClass.replace("icon-", "")];
+      const svgIcon = svgMap[iconClass.replace("icon-", "")];
       console.log(iconClass.replace("icon-", ""), svgIcon);
 
       if (iconClass && svgIcon) icon.innerHTML = svgIcon;
