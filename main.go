@@ -5,10 +5,12 @@ import (
 )
 
 func main(){
-disPath := "./src/dist/css"
-utils.BundleAndMinifyAllCSS(disPath)
-utils.BundleAndMinifySingleCSSFile("./src/CSS/icons.css", disPath)
-utils.BundleAndMinifySingleCSSFile("./src/CSS/tokens.css", disPath)
-utils.BundleAndMinifySingleCSSFile("./src/CSS/utils.css", disPath)
-utils.LoopOverIcons("./src/CSS/icons.css", "./src/JS/icons.js")
+disPathCSS := "./src/dist/css"
+disPathJS := "./src/dist/js"
+utils.BundleAndMinifyAllCSS(disPathCSS)
+utils.BundleAndMinifySingleCSSFile("./src/CSS/icons.css", disPathCSS)
+utils.BundleAndMinifySingleCSSFile("./src/CSS/tokens.css", disPathCSS)
+utils.BundleAndMinifySingleCSSFile("./src/CSS/utils.css", disPathCSS)
+utils.BundleAndMinifyAllJS(disPathJS)
+//utils.LoopOverIcons("./src/CSS/icons.css", "./src/JS/icons.js")
 }
