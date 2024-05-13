@@ -434,17 +434,19 @@ function replaceIcons() {
         ?.split(" ")
         ?.find((c) => c.startsWith("icon-"));
 
-      if (iconClass && icons[iconClass])
-        icon.innerHTML = icons[iconClass.replace("icon-", "")];
+      const svgIcon = icons[iconClass.replace("icon-", "")];
+
+      if (iconClass && svgIcon) icon.innerHTML = svgIcon;
     });
 
     count++;
     clearInterval(interval);
   }
-
-  interval = setInterval(() => {
-    replaceIcons();
-  }, 100);
 }
 
-window.addEventListener("DOMContentLoaded", replaceIcons);
+interval = setInterval(() => {
+  console.log("interval");
+  replaceIcons();
+}, 100);
+
+// window.addEventListener("DOMContentLoaded", replaceIcons);
