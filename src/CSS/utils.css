@@ -408,9 +408,11 @@ progress {
   height: 100%;
 }
 
-.icon-sm {
-  width: var(--icon-size-sm);
-  height: var(--icon-size-sm);
+.icon svg *,
+.icon-sm svg *,
+.icon-lg svg * {
+  color: currentColor;
+  stroke: currentColor;
 }
 
 .icon-lg {
