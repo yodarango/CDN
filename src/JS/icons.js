@@ -434,7 +434,8 @@ function replaceIcons() {
         ?.split(" ")
         ?.find((c) => c.startsWith("icon-"));
 
-      if (iconClass) icon.innerHTML = icons[iconClass];
+      if (iconClass && icons[iconClass])
+        icon.innerHTML = icons[iconClass.replace("icon-", "")];
     });
 
     count++;
