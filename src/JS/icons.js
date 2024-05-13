@@ -431,11 +431,12 @@ function replaceIcons() {
     icons.forEach((icon) => {
       const iconClass = icon
         .getAttribute("class")
-        .find((c) => c.startsWith("icon-"));
-      icon.innerHTML = icons[iconClass];
+        ?.split(" ")
+        ?.find((c) => c.startsWith("icon-"));
+
+      if (iconClass) icon.innerHTML = icons[iconClass];
     });
 
-    console.log("Icons replaced", iconClass, count);
     count++;
     clearInterval(interval);
   }
