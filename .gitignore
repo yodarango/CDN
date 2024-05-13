@@ -3,3 +3,4 @@ send_dist_to_remote.sh
 deploy.sh
 html/
 .DS_Store
+cdn
