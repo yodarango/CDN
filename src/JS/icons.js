@@ -427,7 +427,7 @@ let interval;
 
 function replaceIcons() {
   const icons = document.querySelectorAll(".icon");
-  if (count >= icons.length) {
+  if (icons.length > 0) {
     icons.forEach((icon) => {
       const iconClass = icon
         .getAttribute("class")
