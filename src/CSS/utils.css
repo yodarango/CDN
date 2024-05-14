@@ -409,12 +409,15 @@ progress {
 }
 
 .icon svg *[style*="stroke:#000"],
-.icon svg *[style*="fill:#000"],
 .icon-sm svg *[style*="stroke:#000"],
-.icon svg *[style*="fill:#000"],
-.icon-lg svg *[style*="stroke:#000"],
-.icon svg *[style*="fill:#000"] {
+.icon-lg svg *[style*="stroke:#000"] {
   stroke: currentColor !important;
+}
+
+.icon svg *[style*="fill:#000"],
+.icon svg *[style*="fill:#000"],
+.icon svg *[style*="fill:#000"] {
+  fill: currentColor !important;
 }
 
 .icon-lg {
