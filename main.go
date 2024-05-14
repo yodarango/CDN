@@ -8,7 +8,6 @@ func main(){
 disPathCSS := "./src/dist/css"
 disPathJS := "./src/dist/js"
 utils.BundleAndMinifyAllCSS(disPathCSS)
-utils.BundleAndMinifySingleCSSFile("./src/CSS/icons.css", disPathCSS)
 utils.BundleAndMinifySingleCSSFile("./src/CSS/tokens.css", disPathCSS)
 utils.BundleAndMinifySingleCSSFile("./src/CSS/utils.css", disPathCSS)
 utils.BundleAndMinifyAllJS(disPathJS)
