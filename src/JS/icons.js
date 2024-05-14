@@ -426,6 +426,7 @@ let count = 0;
 let interval;
 
 function replaceIcons() {
+  console.log("...");
   const icons = document.querySelectorAll(".icon");
   if (icons.length > 0) {
     icons.forEach((icon) => {

@@ -414,8 +414,7 @@ progress {
 .icon svg *[style*="fill:#000"],
 .icon-lg svg *[style*="stroke:#000"],
 .icon svg *[style*="fill:#000"] {
-  color: currentColor;
-  stroke: currentColor;
+  stroke: currentColor !important;
 }
 
 .icon-lg {
