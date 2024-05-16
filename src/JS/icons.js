@@ -442,7 +442,7 @@ function replaceIcons() {
   }
 
   // set the max time to wait for the icons to be replaced to 2seconds
-  if (count === 20) clearInterval(interval);
+  if (count > 20) clearInterval(interval);
 }
 
 interval = setInterval(() => {
