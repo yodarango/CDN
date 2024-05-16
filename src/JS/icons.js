@@ -426,6 +426,7 @@ let interval;
 let count; // how many times should the function try to replace the icons  before one is found
 function replaceIcons() {
   console.log("...");
+  count++;
   const icons = document.querySelectorAll(".icon");
   if (icons.length > 0) {
     clearInterval(interval);
