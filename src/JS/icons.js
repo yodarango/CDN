@@ -423,7 +423,7 @@ const svgMap = {
 };
 
 let interval;
-let count; // how many times should the function try to replace the icons  before one is found
+let count = 0; // how many times should the function try to replace the icons  before one is found
 function replaceIcons() {
   console.log("...");
   count++;
