@@ -423,7 +423,7 @@ const svgMap = {
 };
 
 let interval;
-
+let count; // how many times should the function try to replace the icons  before one is found
 function replaceIcons() {
   console.log("...");
   const icons = document.querySelectorAll(".icon");
@@ -440,6 +440,9 @@ function replaceIcons() {
       if (iconClass && svgIcon) icon.innerHTML = svgIcon;
     });
   }
+
+  // set the max time to wait for the icons to be replaced to 2seconds
+  if (count === 20) clearInterval(interval);
 }
 
 interval = setInterval(() => {
