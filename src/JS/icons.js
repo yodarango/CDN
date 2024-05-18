@@ -425,13 +425,14 @@ const svgMap = {
 let interval;
 let count = 0; // how many times should the function try to replace the icons  before one is found
 function replaceIcons() {
-  console.log("...");
   count++;
   const defaultIcons = document.querySelectorAll(".icon");
   const smallIcons = document.querySelectorAll(".icon-small");
   const largeIcons = document.querySelectorAll(".icon-large");
 
   const icons = [...defaultIcons, ...smallIcons, ...largeIcons];
+
+  console.log("icons found: " + icons.length);
 
   if (icons.length > 0) {
     clearInterval(interval);
