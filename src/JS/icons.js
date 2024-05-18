@@ -427,8 +427,8 @@ let count = 0; // how many times should the function try to replace the icons  b
 function replaceIcons() {
   count++;
   const defaultIcons = document.querySelectorAll(".icon");
-  const smallIcons = document.querySelectorAll(".icon-small");
-  const largeIcons = document.querySelectorAll(".icon-large");
+  const smallIcons = document.querySelectorAll(".icon-sm");
+  const largeIcons = document.querySelectorAll(".icon-lg");
 
   const icons = [...defaultIcons, ...smallIcons, ...largeIcons];
 
@@ -443,8 +443,7 @@ function replaceIcons() {
         .getAttribute("class")
         ?.split(" ")
         ?.find(
-          (c) =>
-            c.startsWith("icon-") && c !== "icon-small" && c !== "icon-large"
+          (c) => c.startsWith("icon-") && c !== "icon-sm" && c !== "icon-lg"
         );
 
       const svgIcon = svgMap[iconClass.replace("icon-", "")];

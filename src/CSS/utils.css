@@ -387,7 +387,6 @@ progress {
   font-size: 0.875em;
   text-transform: uppercase;
 }
-
 .icon,
 .icon-sm,
 .icon-lg {
@@ -423,6 +422,11 @@ progress {
 .icon-lg {
   width: var(--icon-size-lg);
   height: var(--icon-size-lg);
+}
+
+.icon-sm {
+  width: var(--icon-size-sm);
+  height: var(--icon-size-sm);
 }
 
 /* TABLES */
