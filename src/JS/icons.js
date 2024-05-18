@@ -427,7 +427,12 @@ let count = 0; // how many times should the function try to replace the icons  b
 function replaceIcons() {
   console.log("...");
   count++;
-  const icons = document.querySelectorAll(".icon");
+  const defaultIcons = document.querySelectorAll(".icon");
+  const smallIcons = document.querySelectorAll(".icon-small");
+  const largeIcons = document.querySelectorAll(".icon-large");
+
+  const icons = [...defaultIcons, ...smallIcons, ...largeIcons];
+
   if (icons.length > 0) {
     clearInterval(interval);
     icons.forEach((icon) => {
