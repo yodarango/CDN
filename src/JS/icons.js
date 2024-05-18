@@ -437,10 +437,15 @@ function replaceIcons() {
   if (icons.length > 0) {
     clearInterval(interval);
     icons.forEach((icon) => {
+      // replace the icon with the svg according to the icon class
+      // but exclude the icon-small and icon-large classes
       const iconClass = icon
         .getAttribute("class")
         ?.split(" ")
-        ?.find((c) => c.startsWith("icon-"));
+        ?.find(
+          (c) =>
+            c.startsWith("icon-") && c !== "icon-small" && c !== "icon-large"
+        );
 
       const svgIcon = svgMap[iconClass.replace("icon-", "")];
 
