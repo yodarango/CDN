@@ -395,7 +395,10 @@ progress {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+  justify-content: center;
+  align-items: center;
   display: block;
+  display: flex;
 }
 
 .icon svg,
