@@ -432,7 +432,7 @@ progress {
   height: var(--icon-size-sm);
 }
 
-.ion-icon {
+ion-icon {
   font-size: var(--icon-size);
 }
 
