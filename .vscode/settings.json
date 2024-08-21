@@ -1,3 +1,23 @@
 {
-  "workbench.colorTheme": "Bearded Theme Aquarelle Cymbidium"
+  "workbench.colorTheme": "Bearded Theme Aquarelle Cymbidium",
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#ee813c",
+    "activityBar.background": "#ee813c",
+    "activityBar.foreground": "#15202b",
+    "activityBar.inactiveForeground": "#15202b99",
+    "activityBarBadge.background": "#8af5b3",
+    "activityBarBadge.foreground": "#15202b",
+    "commandCenter.border": "#15202b99",
+    "sash.hoverBorder": "#ee813c",
+    "statusBar.background": "#e36414",
+    "statusBar.foreground": "#15202b",
+    "statusBarItem.hoverBackground": "#b44f10",
+    "statusBarItem.remoteBackground": "#e36414",
+    "statusBarItem.remoteForeground": "#15202b",
+    "titleBar.activeBackground": "#e36414",
+    "titleBar.activeForeground": "#15202b",
+    "titleBar.inactiveBackground": "#e3641499",
+    "titleBar.inactiveForeground": "#15202b99"
+  },
+  "peacock.color": "#e36414"
 }

@@ -432,6 +432,10 @@ progress {
   height: var(--icon-size-sm);
 }
 
+.ion-icon {
+  font-size: var(--icon-size);
+}
+
 /* TABLES */
 .table-bordered > :not(caption) > * {
   border-width: var(--dr-border-width) 0;

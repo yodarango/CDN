@@ -35,8 +35,10 @@ To build on top of this system, simply overwrite the dictionary tokens.
 - Simply run `go run main.go` and all the magic should happen ✨
 - all static files to be served can be scp'd from the `src/dist` dir by running the command `send_dist_to_remote.sh`. This is the file served by nginx
 - To get all the stats of the VPS run `get_vps_project_stats.sh`. This script will fetch the data and write to the html file in the `/dist` directory
+- **OR** run ./deploy.sh to execute the entire process
 - **THIS IS NOT A SERVER OR APP** It is only a minifying, bundling, and asset-builder for the files to be served
-- The ionic icons are located in their own directory `iconic`. Bundle it and copy the `dist` folder in the `/dist/ionic` dire in this project.
+- ~~The ionic icons are located in their own directory `iconic`. Bundle it and copy the `dist` folder in the `/dist/ionic` dire in this project.~~
+- I have removed the icons. Icons are now served from each app root's public directory. The compiled dist comes from the iconic repo.
 
 ### About main.go
 
