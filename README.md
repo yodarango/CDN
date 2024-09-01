@@ -38,7 +38,8 @@ To build on top of this system, simply overwrite the dictionary tokens.
 - **OR** run ./deploy.sh to execute the entire process
 - **THIS IS NOT A SERVER OR APP** It is only a minifying, bundling, and asset-builder for the files to be served
 - ~~The ionic icons are located in their own directory `iconic`. Bundle it and copy the `dist` folder in the `/dist/ionic` dire in this project.~~
-- I have removed the icons. Icons are now served from each app root's public directory. The compiled dist comes from the iconic repo.
+- I have removed the ioninc icons. Icons are now served from each app root's public directory. The compiled dist comes from the iconic repo.
+- The app.go is a small server in charge of serving public files to the client
 
 ### About main.go
 
