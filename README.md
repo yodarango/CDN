@@ -49,4 +49,5 @@ This files to be minimized are hardcoded in main.go. If adding or deleting files
 
 - Add some styles to the `src/dist/html/server_stats.html`
 - Make a visual page of all the colors, icons and assets used
-- Find a better system for coloring svg icons
+- ~~Find a better system for coloring svg icons~~
+- Add the dist files from ionic icons to this project and serve them from here

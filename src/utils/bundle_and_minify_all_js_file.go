@@ -14,7 +14,7 @@ import (
 // Combine and minify all css files
 func BundleAndMinifyAllJS(distPath string) {
 	fmt.Println("💨 Starting JS minification process")
-	file := "./src/JS/icons.js"
+	file := "./src/JS/tokens.js"
 
 	minifiedFilePath  := distPath + "/icons.min.js"
 	fmt.Println("🤏 Minified all CSS files")

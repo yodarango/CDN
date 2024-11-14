@@ -2820,18 +2820,3 @@ fieldset:disabled .btn,
 .bg-info-80 {
   background-color: rgba(var(--dr-info-rgb), 0.8);
 }
-
-@media (min-width: 576px) {
-}
-@media (min-width: 768px) {
-}
-@media (min-width: 992px) {
-}
-@media (min-width: 1200px) {
-}
-@media (min-width: 1400px) {
-}
-@media (min-width: 1600px) {
-}
-@media print {
-}
